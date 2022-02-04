@@ -10,25 +10,66 @@ backports-zoneinfo==0.2.1
     # via django
 black==22.1.0
     # via -r requirements.in
+certifi==2021.10.8
+    # via requests
+charset-normalizer==2.0.11
+    # via requests
 click==8.0.3
     # via black
+coreapi==2.3.3
+    # via drf-yasg
+coreschema==0.0.4
+    # via
+    #   coreapi
+    #   drf-yasg
 django==4.0.2
     # via
     #   -r requirements.in
     #   djangorestframework
+    #   drf-yasg
 djangorestframework==3.13.1
+    # via
+    #   -r requirements.in
+    #   drf-yasg
+drf-yasg==1.20.0
     # via -r requirements.in
+idna==3.3
+    # via requests
+inflection==0.5.1
+    # via drf-yasg
+itypes==1.2.0
+    # via coreapi
+jinja2==3.0.3
+    # via coreschema
+markupsafe==2.0.1
+    # via jinja2
 mypy-extensions==0.4.3
     # via black
+packaging==21.3
+    # via drf-yasg
 pathspec==0.9.0
     # via black
 platformdirs==2.4.1
     # via black
+pyparsing==3.0.7
+    # via packaging
 pytz==2021.3
     # via djangorestframework
+requests==2.27.1
+    # via coreapi
+ruamel-yaml==0.17.20
+    # via drf-yasg
+ruamel-yaml-clib==0.2.6
+    # via ruamel.yaml
 sqlparse==0.4.2
     # via django
 tomli==2.0.0
     # via black
 typing-extensions==4.0.1
     # via black
+uritemplate==4.1.1
+    # via
+    #   coreapi
+    #   drf-yasg
+urllib3==1.26.8
+    # via requests
