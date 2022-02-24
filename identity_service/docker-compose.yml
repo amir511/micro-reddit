@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  identityservice:
+    image: identityservice
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - identityservice_db
+    ports:
+      - 8000:8000
+
+  identityservice_db:
+    image: postgres:11.10-alpine
+    container_name: identityservice_db
+    environment:
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=identity_db
+      - POSTGRES_USER=identity_user
+      - POSTGRES_PASSWORD=identity_password
+    expose:
+      - 5432
+    ports:
+      - 5432:5432

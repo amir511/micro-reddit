@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-szf%&p6z))8+%@&31$)-*qb2fj2ee#_yb17bz$5eb=)kx5!ouc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,9 +75,14 @@ WSGI_APPLICATION = 'identity_project.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    # everything has been hardcoded here for the sake of POC only.
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'identity_db',
+        'USER': 'identity_user',
+        'PASSWORD': 'identity_password',
+        'HOST': 'identityservice_db',
+        'PORT': 5432,
     }
 }
 
